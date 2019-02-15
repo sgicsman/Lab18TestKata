@@ -66,6 +66,17 @@ public class StringCalculatorTest {
 	
 
 	@Test
+	void testAdd2_3() {
+		
+		String number = "2,3";
+		
+		String expected = "5.0";
+		String actual = StringCalculator.add(number);
+		
+		assertEquals(expected, actual);
+	}
+	
+@Test
 	void testAddBigNums() {
 		
 		String number = "100, 123900, 176100";
@@ -77,18 +88,19 @@ public class StringCalculatorTest {
 	}
 	
 	
-	@Test
-	void testAdd2_3() {
-		
-		String number = "2,3";
-		
-		String expected = "5.0";
-		String actual = StringCalculator.add(number);
-		
-		assertEquals(expected, actual);
-	}
+@Test
+void testAdd3Nums() {
 	
-	@Test
+	String number = "2,3,55";
+	
+	String expected = "60.0";
+	String actual = StringCalculator.add(number);
+	
+	assertEquals(expected, actual);
+}
+
+
+@Test
 	void testAddExtraSpaces() {
 		
 		String number = "2, 3";
